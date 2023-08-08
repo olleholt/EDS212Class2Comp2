@@ -41,4 +41,19 @@ dfdy = D(fxyz, 'y') #this is a partial derivative
 dfdy
 ```
 
-## Penguin ggplot
+## Penguin plot
+
+```{r}
+#geom_point() for scatterplot
+#body_mass for x and flipper length y
+
+ggplot(data = penguins, aes(x=body_mass_g,y=flipper_length_mm, color = species)) +
+  geom_point() +
+  labs(x = "Body Mass (g)",
+       y = "Flipper Length (mm)",
+       title = "Palmer Penguins body dimensions") +
+  theme_linedraw()
+#aes is reserved for mapping variables for chart asthetics
+#to change all points to purple, do outside of aes [but still inside ggplot ()]
+#to change color of point based on species than do that inside aes!
+```
