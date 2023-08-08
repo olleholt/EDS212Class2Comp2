@@ -2,4 +2,43 @@
 title: "EDS212Class2Comp2"
 ---
 
-## 
+## Directions for Git
+
+first type usethis::use_git()
+
+then answer yes twice
+
+now we can make changes and then make sure to save those changes
+
+we now have a local git repo (we will never look at a local one, look at it through github after these next steps)
+
+usethis::use_github()
+
+mine says master instead of main?? is that a problem?? (in the Pushing to Github)
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+
+```
+
+## Plotting Functions in ggplot2
+
+```{r}
+fx = function(x) {3 * x^2 + 4}
+
+ggplot(data.frame(x = c(1,100)), aes(x = x)) +
+  geom_function(fun = fx)
+```
+
+## Partial Derivative
+
+```{r}
+#use the expression function to then take a derivative of it
+#use function function to just make a function
+fxyz = expression(2 * x * y + 3* (x^2) * (z^3))
+dfdy = D(fxyz, 'y') #this is a partial derivative
+dfdy
+```
+
+## Penguin ggplot
